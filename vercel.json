@@ -1,4 +1,5 @@
 
+
 {
     "rewrites": [
         { "source": "/product/:id", "destination": "/product/[id]" },
