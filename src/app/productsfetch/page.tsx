@@ -3,10 +3,9 @@
 import React, { useEffect, useState } from 'react';
 import sanityClient from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
-import Link from 'next/link'; 
 import ProductCard from '@/components/ProductCard'; 
 import SideBar from '@/components/Side';
-import SearchBar from '@/components/SearchBar'; 
+
 
 interface Product {
   _id: number;
@@ -76,7 +75,7 @@ const Home = () => {
   return (
     <div className="flex flex-col lg:flex-row">
       {/* Sidebar for larger screens */}
-      <div className="w-full lg:w-1/4">
+      <div className="flex">
         <SideBar />
       </div>
 
@@ -91,9 +90,6 @@ const Home = () => {
             {error}
           </p>
         )}
-
-        {/* SearchBar Component */}
-        <SearchBar onSearch={handleSearch} /> {/* Pass the handleSearch function as prop */}
 
         {loading ? (
           <p className="text-center">Loading products...</p>
