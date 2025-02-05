@@ -3,6 +3,6 @@
 {
     "rewrites": [
         { "source": "/product/:id", "destination": "/product/[id]" },
-        { "source": "/(.*)", "destination": "/" }
+    
     ]
 }
